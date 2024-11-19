@@ -27,7 +27,7 @@ pub struct SignupData {
     pub secret_word: String,
     pub ip:String,
     pub device: String,
-    pub browser:String,  // Device used for registration, e.g., "web", "android", "ios" etc.  // Set default to "web" as it's the most common device used for registration.  // Set default date for created_at and updated_at fields.  // Add new fields for google_auth_secret and verified fields.  // Add new field for mail_verified fields.  // Add new field for device_token, last_login
+    pub browser:String, 
 }
 
 #[derive(Deserialize,Debug)]
@@ -89,7 +89,7 @@ pub struct ProfileData {
     pub ville:String,
     pub mobile: i32,
     pub appareil_inscription: String,
-    pub navigateur_inscription:String,  // Device used for registration, e.g., "web", "android", "ios" etc.  // Set default to "web" as it's the most common device used for registration.  // Set default date for created_at and updated_at fields.  // Set default to false for verified and mail_verified fields.  // Add new fields for google_auth_secret and verified fields.  // Add new field for mail_
+    pub navigateur_inscription:String,
     pub inscrit_le: String, 
 }
 #[derive(Deserialize,Debug)]
@@ -125,7 +125,7 @@ pub struct TwoFaData {
     pub code:String,
     pub ip:String,
     pub device: String,
-    pub browser:String,  // Device used for registration, e.g., "web", "android", "ios" etc.  // Set default to "web" as it's the most common device used for registration.  // Set default date for created_at and updated_at fields.  // Add new fields for google_auth_secret and verified fields.  // Add new field for mail_verified fields.  // Add new field for device
+    pub browser:String,  
 }
 
 #[derive(Serialize)]
@@ -188,12 +188,11 @@ pub struct User {
     pub last_login: String,
     pub registration_ip: String,
     pub registration_device: String,
-    pub registration_browser:String,  // Device used for registration, e.g., "web", "android", "ios" etc.  // Set default to "web" as it's the most common device used for registration.  // Set default date for created_at and updated_at fields.  // Set default to false for verified and mail_verified fields.  // Add new fields for google_auth_secret and verified fields.  // Add new field for mail_
+    pub registration_browser:String, 
     pub created_at: String,
     pub twofa_validated: bool,
     pub verified:bool,
     pub mail_verified:bool,
-    //pub mobile_verified:bool,
     pub banned:bool,
     pub demo: bool,
     pub kyc_verified: bool,
@@ -202,22 +201,7 @@ pub struct User {
    
    
 }
-#[derive(Serialize, Deserialize, Debug)]
-pub struct AML {
-    pub id_user: i64,
-    pub occupation: String,
-    pub employer: String,
-    pub activity:String,
-    pub source_of_funds: String, // Source of funds (e.g., salary, investment, inheritance)
-    pub annual_income: String, // Annual income (could be in a specific currency format)
-    pub net_worth: String, // Net worth (could be in a specific currency format)
-    pub politically_exposed: bool, // Whether the user is a Politically Exposed Person (PEP)
-    pub risk_assessment: String, // Low, Medium, High
-    pub aml_review_date: String, // Date of last AML checks
-    pub suspicious_activity_reported: bool, // Whether a Suspicious Activity Report (SAR) was filed
-    pub suspicious_activity_notes: String, // Notes on any suspicious activities
-   
-}
+
 
 #[derive(Serialize,Deserialize,Debug)]
 pub struct UserSensitive {
@@ -295,13 +279,7 @@ pub struct TokenData {
     pub issued_at: String, //Human readable format
     pub exp: usize,//Human readable format
     pub nonce:String, 
-    /*pub verified:bool,
-    pub demo: bool,
-    pub kyc_verified: bool,
-    pub aml_verified: bool,
-    pub mail_verified:bool,
-    pub twofa_verified:bool,
-    pub banned:bool,*/
+   
 }
 
 #[derive(Serialize, Deserialize, Debug,Clone)]
@@ -310,7 +288,7 @@ pub struct MailCode{
 }
 
 pub type MailMap = TimedMap<i64, MailCode>;
-//pub type PhoneMap = DashMap<i64, MobileCode>;
+
 
 #[derive(Serialize, Deserialize, Debug,Clone)]
 pub struct WebContent{
