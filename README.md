@@ -5,25 +5,25 @@ UserAuthServer is a backend service built with Rust and Actix-Web for managing u
 ## Features
 
 **Authentication and Account Management**
--**Signup**: Register new users and store their information securely.
--**Signin**: Authenticate users using email/password and 2FA via Google Authenticator.
--**Logout**: End user sessions securely by also removing the token cookie inside the browser.
--**Profile Management**: Update and retrieve user profile information.
--**Password Recovery**: Reset forgotten passwords using OTP-based recovery.
+- **Signup**: Register new users and store their information securely.
+- **Signin**: Authenticate users using email/password and 2FA via Google Authenticator.
+- **Logout**: End user sessions securely by also removing the token cookie inside the browser.
+- **Profile Management**: Update and retrieve user profile information.
+- **Password Recovery**: Reset forgotten passwords using OTP-based recovery.
 
 **Security**
--**Password Encryption**: Passwords are hashed using Bcrypt, then encrypted with AES before being stored in the database.
--**Two-Factor Authentication (2FA)**: Use Google Authenticator for additional security during login. The 2FA key is also encrypted before being stored in the database.
--**Secure Cookies**: Session tokens are stored in cookies with `Secure` and `Lax` attributes. Cookies only work when the server runs on HTTPS.
--**Token Configuration**: Session tokens have a default expiration of 36,000 seconds for post-2FA checking and 600 seconds for pre-2FA checking, configurable via the .env file.
+- **Password Encryption**: Passwords are hashed using Bcrypt, then encrypted with AES before being stored in the database.
+- **Two-Factor Authentication (2FA)**: Use Google Authenticator for additional security during login. The 2FA key is also encrypted before being stored in the database.
+- **Secure Cookies**: Session tokens are stored in cookies with `Secure` and `Lax` attributes. Cookies only work when the server runs on HTTPS.
+- **Token Configuration**: Session tokens have a default expiration of 36,000 seconds for post-2FA checking and 600 seconds for pre-2FA checking, configurable via the .env file.
 
 **Real-Time Notifications**
--Notify users of new messages in real time through `/ws/usermessage`.
--Broadcast news updates via `/ws/news`.
+- Notify users of new messages in real time through `/ws/usermessage`.
+- Broadcast news updates via `/ws/news`.
 
 **Additional Functionalities**
--**KYC Management**: Submit and update Know Your Customer (KYC) information.
--**Security Settings**: Manage user-specific security preferences.
+- **KYC Management**: Submit and update Know Your Customer (KYC) information.
+- **Security Settings**: Manage user-specific security preferences.
 
 ## Technologies Used
 
