@@ -147,4 +147,4 @@ server {
 This project is open-source and available under the MIT License. See the LICENSE file for details.
 
 ## Continuation and improvement
-Developers may modify, add, delete functionalities and microservices.
+One may modify, add, or delete functionalities, microservices, and features.
