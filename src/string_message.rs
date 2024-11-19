@@ -1,0 +1,15 @@
+pub const INTERNALSERVERERROR: &str = "Une erreur s'est produite, veuillez ressayer plus tard!";
+pub const NCOUNTRY:&str = "Pays en dehors de la jurisdiction!";
+pub const SAVED_BUT_ERROR:&str = "Vous êtes enregistrés mais un problème est survenu sur le serveur , veuillez connecter plus tard.";
+pub const SIGNUP_SUCCESS:&str = "/activation_compte";
+pub const EMAIL_ALREADY:&str = "Email dejà verifié, connectez-vous!";
+pub const EXPIRED:&str = "Session expirée, Reconnectez-vous";
+pub const EXMAILCODE:&str = "Code d'activation expiré.";
+pub const INVALID_CODE:&str = "Code invalide";
+pub const NOTIN:&str = "Pas encore inscrit, inscrivez-vous!";
+pub const SIGNIN_FAILED:&str = "L'Email ou le mot de passe est erroné";
+pub const ALREADY_LOGGED:&str = "/tsena";
+pub const OTP_NEW_ERROR:&str = "Le code ou votre mot de passe est érroné";
+pub const SAME_PASS_ERROR:&str = "Le nouveau mot de passe ne doit pas être le même que l'ancien.";
+pub const PASS_RECOVERY_ERROR:&str = "Le mot secret ou le code OTP est erroné.";
+pub const OTP_RECOVERY_ERROR:&str = "Le mot secret ou le mot secret est eronné.";
